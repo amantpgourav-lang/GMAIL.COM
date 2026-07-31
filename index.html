@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gmail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="topbar-left">
+    <button class="icon-btn" id="menuToggle" title="Main menu" aria-label="Main menu">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div class="brand">
+      <svg class="brand-icon" viewBox="0 0 48 48" width="32" height="32">
+        <path d="M6 12h36v24H6z" fill="#fff" stroke="none"/>
+        <path d="M6 12l18 13L42 12" fill="none" stroke="#EA4335" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 12v24h9V19" fill="none" stroke="#4285F4" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M42 12v24h-9V19" fill="none" stroke="#34A853" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 19l9 6.5 9-6.5" fill="none" stroke="#FBBC05" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">Gmail</span>
+    </div>
+  </div>
+
+  <div class="topbar-search">
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35m1.35-5.15a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search mail" autocomplete="off">
+    </div>
+  </div>
+
+  <div class="topbar-right">
+    <button class="icon-btn" id="refreshBtn" title="Refresh">
+      <svg viewBox="0 0 24 24"><path d="M4 4v6h6M20 20v-6h-6M4.5 15a8 8 0 0014.9 2.5M19.5 9A8 8 0 004.6 6.5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <a class="icon-btn" id="secondSiteLink" href="https://your-github-username.github.io/your-repo" target="_blank" rel="noopener" title="Open linked site">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="2"/></svg>
+    </a>
+    <div class="avatar" id="avatarBtn" title="Account">Y</div>
+  </div>
+</header>
+
+<div class="app-body">
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <nav class="sidebar" id="sidebar">
+    <button class="compose-btn" id="composeBtn">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="compose-label">Compose</span>
+    </button>
+
+    <ul class="nav-list" id="navList">
+      <li class="nav-item active" data-filter="inbox">
+        <svg viewBox="0 0 24 24"><path d="M4 12l1.5-7A2 2 0 017.45 3h9.1a2 2 0 011.95 2l1.5 7v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6z" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 12h4l2 3h4l2-3h4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        <span>Inbox</span><span class="count" id="inboxCount"></span>
+      </li>
+      <li class="nav-item" data-filter="starred">
+        <svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.2L12 18.3 5.6 21.7 7 14.5l-5.3-5 7.2-.9L12 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+        <span>Starred</span>
+      </li>
+      <li class="nav-item" data-filter="sent">
+        <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        <span>Sent</span>
+      </li>
+      <li class="nav-item" data-filter="important">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h7l-1 8 11-13h-7l1-7z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/></svg>
+        <span>Important</span>
+      </li>
+    </ul>
+
+    <a class="nav-item" id="nitrisPortalLink" href="https://amantpgourav-lang.github.io/NITRKL/" target="_blank" rel="noopener" title="Open NITRIS Student Portal in a new tab">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6" fill="none"/><path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg>
+      <span>NITRIS Student Portal</span>
+    </a>
+
+    <div class="nav-divider"></div>
+
+    <ul class="nav-list label-list" id="labelList">
+      <!-- populated by JS -->
+    </ul>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="main">
+
+    <!-- toolbar above the list -->
+    <div class="list-toolbar" id="listToolbar">
+      <label class="select-all">
+        <input type="checkbox" id="selectAllCheckbox">
+      </label>
+      <button class="icon-btn small" id="archiveSelected" title="Archive">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8M10 13h4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn small" id="deleteSelected" title="Delete">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2m2 0v14a1 1 0 01-1 1H7a1 1 0 01-1-1V6h12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn small" id="markReadSelected" title="Mark as read">
+        <svg viewBox="0 0 24 24"><path d="M2 8l10 6 10-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+      </button>
+      <div class="toolbar-spacer"></div>
+      <span class="list-range" id="listRange"></span>
+      <button class="icon-btn small" id="prevPage" title="Older">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="icon-btn small" id="nextPage" title="Newer">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+
+    <!-- category tabs (gmail style) -->
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-tab="Primary">
+        <svg viewBox="0 0 24 24"><path d="M4 12l1.5-7A2 2 0 017.45 3h9.1a2 2 0 011.95 2l1.5 7v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6z" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        Primary
+      </button>
+      <button class="tab" data-tab="Social">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M4 20c0-3.5 3.5-6 8-6s8 2.5 8 6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        Social
+      </button>
+      <button class="tab" data-tab="Promotions">
+        <svg viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7l10 8z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.2" fill="currentColor"/></svg>
+        Promotions
+      </button>
+      <button class="tab" data-tab="Updates">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M12 7v6l4 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        Updates
+      </button>
+      <button class="tab" data-tab="Forums">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 01-12.4 7.55L3 20l1.05-4.5A8.5 8.5 0 1121 11.5z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        Forums
+      </button>
+    </div>
+
+    <!-- email list -->
+    <div class="email-list" id="emailList"></div>
+
+    <!-- email detail view -->
+    <div class="email-detail" id="emailDetail" hidden>
+      <div class="detail-toolbar">
+        <button class="icon-btn" id="backBtn" title="Back to inbox">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn" id="detailArchive" title="Archive"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="4" rx="1" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8M10 13h4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
+        <button class="icon-btn" id="detailDelete" title="Delete"><svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2m2 0v14a1 1 0 01-1 1H7a1 1 0 01-1-1V6h12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="icon-btn" id="detailStar" title="Star"><svg viewBox="0 0 24 24"><path d="M12 2l3.1 6.6 7.2.9-5.3 5 1.4 7.2L12 18.3 5.6 21.7 7 14.5l-5.3-5 7.2-.9L12 2z" stroke="currentColor" stroke-width="1.6" fill="none"/></svg></button>
+      </div>
+      <div class="detail-body" id="detailBody"></div>
+    </div>
+
+    <div class="empty-state" id="emptyState" hidden>
+      <svg viewBox="0 0 200 140" width="160"><rect x="20" y="30" width="160" height="90" rx="8" fill="#f1f3f4"/><path d="M20 40l80 55 80-55" stroke="#c4c7c5" stroke-width="3" fill="none"/></svg>
+      <p>No messages here</p>
+    </div>
+  </main>
+</div>
+
+<!-- ===================== COMPOSE WINDOW ===================== -->
+<div class="compose" id="composeWindow" hidden>
+  <div class="compose-header">
+    <span>New Message</span>
+    <div class="compose-header-actions">
+      <button class="icon-btn small" id="minimizeCompose" title="Minimize">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn small" id="closeCompose" title="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="compose-body">
+    <input type="text" id="composeTo" placeholder="To" class="compose-field">
+    <input type="text" id="composeSubject" placeholder="Subject" class="compose-field">
+    <textarea id="composeBody" placeholder="Write your message..." class="compose-textarea"></textarea>
+  </div>
+  <div class="compose-footer">
+    <button class="send-btn" id="sendBtn">Send</button>
+    <button class="icon-btn small" id="discardCompose" title="Discard draft">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2m2 0v14a1 1 0 01-1 1H7a1 1 0 01-1-1V6h12z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ===================== ACCOUNT SWITCHER ===================== -->
+<div class="account-popup" id="accountPopup" hidden>
+  <div class="account-popup-header">
+    <span class="account-email" id="accountEmailText"></span>
+    <button class="icon-btn small" id="closeAccountPopup" title="Close">
+      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="account-photo-wrap">
+    <div class="account-photo" id="accountPhoto"></div>
+  </div>
+  <div class="account-greeting">Hi, <span id="accountFirstName"></span>!</div>
+  <a href="https://myaccount.google.com" target="_blank" rel="noopener" class="manage-account-btn">Manage your Google Account</a>
+  <div class="account-divider"></div>
+  <div class="other-accounts" id="otherAccountsList"></div>
+  <div class="account-action" id="addAccountBtn">
+    <span class="account-action-icon">+</span> Add another account
+  </div>
+  <div class="account-action" id="signOutAllBtn">
+    <span class="account-action-icon">↪</span> Sign out of all accounts
+  </div>
+  <div class="storage-info" id="storageInfo"></div>
+  <div class="account-footer">
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+    <span>·</span>
+    <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
