@@ -4086,5 +4086,33 @@ const EMAILS = [
     "read": true,
     "starred": false,
     "important": true
+  },
+  {
+    "id": 293,
+    "from": "Rashtriya Ispat Nigam Limited (RINL)",
+    "fromEmail": "careers@vizagsteel.com",
+    "to": "719MM1041@nitrkl.ac.in",
+    "subject": "Shortlisted for Technical Interview - Rashtriya Ispat Nigam Limited (RINL), Visakhapatnam Steel Plant",
+    "preview": "We are pleased to inform you that, based on your application and initial screening, you have been shortlisted for the Technical Interview...",
+    "body": "Dear Mr. Aman Sethi,\n\nGreetings from Rashtriya Ispat Nigam Limited (RINL), Visakhapatnam Steel Plant.\n\nWe are pleased to inform you that, based on your application and initial screening, you have been shortlisted for the Technical Interview as part of the ongoing selection process.\n\nThe details of the interview are as follows:\n\nDate: 25th March 2026\nTime: 06:00 PM\n\nYou are requested to make yourself available as per the above schedule. Kindly ensure that you are prepared in advance and adhere strictly to the allotted timing.\n\nA detailed confirmation letter outlining the mode of interview, reporting instructions, dress code, and general guidelines to be followed during the interview process will be communicated to you in due course.\n\nCandidates are advised to regularly check their registered email ID for further updates and communications. All subsequent information regarding the interview process will be shared accordingly.\n\nIn case of any clarification, you may write to us at careers@vizagsteel.com.\n\nWe wish you the very best for your interview.\n\nYours sincerely,\nRecruitment & Selection Team\nRashtriya Ispat Nigam Limited (RINL)\nVisakhapatnam Steel Plant",
+    "label": "Primary",
+    "date": "2026-03-21T11:32:00",
+    "read": true,
+    "starred": false,
+    "important": true
+  },
+  {
+    "id": 294,
+    "from": "Rashtriya Ispat Nigam Limited (RINL)",
+    "fromEmail": "careers@vizagsteel.com",
+    "to": "719MM1041@nitrkl.ac.in",
+    "subject": "Submission of Documents for Verification - Recruitment Process | Rashtriya Ispat Nigam Limited",
+    "preview": "We are pleased to inform you that, based on your performance in the campus recruitment process conducted at National Institute of Technology, Rourkela...",
+    "body": "Dear Mr. Aman Sethi,\n\nGreetings from Rashtriya Ispat Nigam Limited.\n\nWe are pleased to inform you that, based on your performance in the campus recruitment process conducted at National Institute of Technology, Rourkela, you have been professionally shortlisted for further stages of evaluation and recruitment formalities.\n\nIn continuation of the selection process, you are requested to submit the following documents for verification and processing purposes:\n\nRecent Passport Size Photograph\nGovernment-issued Photo Identification Proof\nInstitute Identity Card\nProof of Date of Birth\nCollege Roll Number: 719MM1041\nStudent ID: 54201\n\nCandidates are advised to ensure that all submitted documents are clear, valid, and self-attested wherever applicable. Any discrepancy identified during the verification process may result in the cancellation of candidature.\n\nThe documents may be submitted electronically in PDF format through the designated placement coordination channel within the prescribed timeline communicated separately.\n\nPlease note that timely submission of all required documents is mandatory for consideration in the subsequent stages of the recruitment process.\n\nWe appreciate your continued participation and cooperation throughout the selection procedure and wish you success in the forthcoming stages.\n\nRegards,\nRecruitment & Selection Division\nRashtriya Ispat Nigam Limited\n\nNote:\nThis communication is intended solely for the purpose of document submission and further recruitment processing. It does not constitute, imply, or guarantee a final offer of employment, appointment, or engagement with Rashtriya Ispat Nigam Limited. Final selection shall remain subject to successful completion of all stages of evaluation, document verification, medical fitness requirements, and approval by the competent authority.",
+    "label": "Primary",
+    "date": "2026-05-06T10:15:00",
+    "read": true,
+    "starred": false,
+    "important": true
   }
 ];
