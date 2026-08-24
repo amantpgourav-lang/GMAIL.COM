@@ -149,7 +149,7 @@ function getFilteredEmails(){
   } else if (state.filter === "starred") {
     list = list.filter(e => e.starred && !e.deleted);
   } else if (state.filter === "sent") {
-    list = list.filter(e => e.sentByMe && !e.deleted);
+    list = list.filter(e => e.folder === 'sent' && !e.deleted);
   } else if (state.filter === "important") {
     list = list.filter(e => e.important && !e.deleted);
   } else if (state.filter.startsWith("label:")) {
