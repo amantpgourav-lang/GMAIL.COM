@@ -4395,5 +4395,19 @@ const EMAILS = [
     "read": false,
     "starred": false,
     "important": true
+  },
+  {
+    "id": 314,
+    "from": "RINL Recruitment",
+    "fromEmail": "recruitment@vizagsteel.com",
+    "to": "719MM1041@nitrkl.ac.in",
+    "subject": "Technical Workshop on Steel Technology & Metallurgy – 28th September 2026",
+    "preview": "With reference to the ongoing technical learning programme, the next session of the Technical Workshop on Steel Technology & Metallurgy has been scheduled for the selected participants...",
+    "body": "Ref. No.: RINL/RN2534/2026\nDate: 27th September 2026\n\nDear Candidate,\n\nWith reference to the ongoing technical learning programme, the next session of the Technical Workshop on Steel Technology & Metallurgy has been scheduled for the selected participants.\n\nThe session is intended to provide further technical exposure through technical presentations, discussions and interaction covering relevant aspects of steel manufacturing, metallurgical processes, steel processing, quality practices and industrial applications.\n\nThe programme details are as follows:\n\nProgramme: Technical Workshop on Steel Technology & Metallurgy\nDate: 28th September 2026\nTime: 11:00 AM to 3:00 PM\nMode: Online – Google Meet\nParticipants: Selected Candidates\n\nGoogle Meet Details:\n\nMeeting Link: https://meet.google.com/atc-dgfh-hfev\nMeeting ID: atc-dgfh-hfev\n\nParticipants are advised to join the meeting at least 10 minutes before the scheduled commencement of the session to facilitate timely attendance and avoid delays.\n\nThe workshop will include technical presentations and interactive discussions relating to steel technology and metallurgical practices. Participants are encouraged to maintain notes during the sessions and may raise technical queries during the designated interaction periods.\n\nInstructions for Participants:\n\n1. Participants shall join the meeting using their registered/full name for attendance purposes.\n\n2. Participants are required to remain present for the complete duration of the session.\n\n3. Participants should ensure stable internet connectivity and proper functioning of the device before joining the session.\n\n4. Microphones shall remain muted during the technical sessions unless participation is requested by the coordinator or resource person.\n\n5. Participants are requested to maintain proper decorum throughout the programme.\n\n6. Attendance will be recorded during the session.\n\n7. Participants are requested not to circulate the meeting link to persons who are not part of the selected participant group.\n\nThe selected participants are requested to make the necessary arrangements and ensure their availability for the scheduled programme.\n\nThis programme is being conducted for technical knowledge enhancement and industry-oriented learning purposes.\n\nRegards,\nTraining & Technical Development Department\nRashtriya Ispat Nigam Limited (RINL)\nVisakhapatnam",
+    "label": "Primary",
+    "date": "2026-09-28T07:00:00",
+    "read": false,
+    "starred": false,
+    "important": true
   }
 ];
